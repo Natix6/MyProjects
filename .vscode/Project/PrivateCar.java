@@ -7,16 +7,7 @@ public class PrivateCar extends CarData implements Car {
 
     public PrivateCar(int number, String creator, int yearMade, int seats) {
         super(number, creator, yearMade, seats);
-        // instances++;
     }
-
-    // private boolean setAvailability() {
-    //     if(instances > 1) {
-    //         return false;
-    //     } else {
-    //     return true; 
-    //     }
-    // }
 
     public void isRented(boolean ifRented) {
         if(!ifRented) {
@@ -34,16 +25,6 @@ public class PrivateCar extends CarData implements Car {
     public double calcDailyPrice() {
         return getKm() * 20;
     }
-
-    // public boolean isAvailable() {
-    //     available = setAvailability();
-    //     return available;
-    // }
-
-    // @Override
-    // public boolean isRented() {
-    //     return rentable;
-    // }
 
     @Override
     public String toString() {
