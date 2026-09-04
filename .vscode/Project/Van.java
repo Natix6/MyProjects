@@ -1,69 +1,54 @@
-public class Van implements Car {
+public class Van extends CarData implements Car {
 
-    private final int number;
-    private final String creator;
-    private final int yearMade;
-    private final int seats;
-    private int km;
+
     static boolean available;
-    int instances = 0;
     static boolean rentable;
 
+    
     public Van(int number, String creator, int yearMade, int seats) {
-        this.number = number;
-        this.creator = creator;
-        this.yearMade = yearMade;
-        this.seats = seats;
-        instances++;
-        rentable = false;
+        super(number, creator, yearMade, seats);
+        // instances++;
     }
 
-    private boolean setAvailability() {
-        if(instances > 1) {
-            return false;
+    // private boolean setAvailability() {
+    //     if(instances > 1) {
+    //         return false;
+    //     } else {
+    //     return true; 
+    //     } 
+    // }
+
+    public void isRented(boolean ifRented) {
+        if(!ifRented) {
+            rentable = false;
+        } else {
+            rentable = true;
         }
-        return true; 
     }
 
-    public int getNumber() {
-        return number;
-    }
-
-    public String getCreator() {
-        return creator;
-    }
-
-    public int getYearMade() {
-        return yearMade;
-    }
-
-    public int getSeats() {
-        return seats;
-    }
-
-    public void setKm(int km) {
-        this.km = km;
-    }
-
-    public int getKm() {
-        return km;
+    public boolean isAvailable() {
+        return !rentable;
     }
 
     @Override
     public double calcDailyPrice() {
-        return km * 40 + seats * 10;
+        return getKm() * 40 + getSeats() * 10;
     }
 
-    @Override
-    public boolean isAvailable() {
-        available = setAvailability();
-        return available;
-    }
+    // public boolean isAvailable() {
+    //     available = setAvailability();
+    //     return available;
+    // }
+
+    // @Override
+    // public boolean isRented() {
+    //     return rentable;
+    // }
 
     @Override
     public String toString() {
-        return "Van [number=" + number + ", creator=" + creator + ", yearMade=" + yearMade + ", seats=" + seats
-                + ", km=" + km + "]";
+        return "Van [number=" + getNumber() + ", creator=" + getCreator() + ", yearMade=" + getYearMade() + ", seats=" + getSeats()
+                + ", km=" + getKm() + "]";
     }
 
     

@@ -1,39 +1,29 @@
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class CarShop {
     
     List<Car> cars = new ArrayList<>();
-    double sum;
-    
+    private double sum;
+
     public void rentACar(Car car, String name, int lisence, int age) {
         if(age > 18) {
             if(car.isAvailable()) {
                 cars.add(car);
+                car.isRented(true);
             } else {
-                System.out.println("Car already rented!");
+                car.isRented(false);
+                System.out.println("This type of car is already rented!");
             }
         } else {
             System.out.println("Minor bro");
         }
     }
 
-    public void showAvailable() {
-
-        List<String> availablecars = new ArrayList<>();
-        if(MotorCycle.rentable) {
-            availablecars.add("MotorCycle");
-        } else if(Van.rentable) {
-            availablecars.add("Van");
-        } else if(PrivateCar.rentable) {
-        availablecars.add("Private Car");
-        }
-        
-        if(availablecars.isEmpty()) {
-            System.out.println("No available cars!");
-        } else{
-        System.out.println(availablecars);
-        }
+    public List<Car> getRentedCars() {
+        return cars;
     }
 
     public double calcMoney() {
@@ -42,9 +32,7 @@ public class CarShop {
         }
         return sum;
     }
-    
-
-    
-
-
 }
+
+
+

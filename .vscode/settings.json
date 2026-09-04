@@ -3,5 +3,17 @@
     "java.project.sourcePaths": [
         ".vscode\\Project"
     ],
-    "java.project.referencedLibraries": []
+    "java.project.referencedLibraries": {
+        "include": [
+            "classgraph-4.8.179.jar",
+            "lib/*.jar",
+            ".vscode/lib/classgraph-4.8.179.jar",
+            ".vscode/Project/classgraph-4.8.194.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\natal\\Downloads\\classgraph-4.8.179.jar",
+            "lib/classgraph-4.8.179.jar"
+        ]
+    }
+
 }
