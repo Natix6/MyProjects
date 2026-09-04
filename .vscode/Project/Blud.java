@@ -5,11 +5,10 @@ public class Blud {
   public static void main(String[] args) throws Exception {
 
     CarShop carShop = new CarShop();
-    PrivateCar privateCar = new PrivateCar(12345, "Suzuka", 2019, 6);
+    PrivateCar privateCar = new PrivateCar(6767676, "Suzuka", 2019, 6);
     Van van = new Van(12345, "Suzuka", 2019, 6);
     MotorCycle motorCycle = new MotorCycle(12345, "Suzuka", 2019, 6);
     PrivateCar privateCar2 = new PrivateCar(12345, "Suzuka", 2019, 6);
-
 
     List<Car> list = new ArrayList<>();
     list.add(privateCar);

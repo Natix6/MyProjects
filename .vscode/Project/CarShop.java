@@ -9,12 +9,12 @@ public class CarShop {
     private double sum;
 
     public void rentACar(Car car, String name, int lisence, int age) {
+
         if(age > 18) {
-            if(car.isAvailable()) {
+            if(!car.isRented()) {
                 cars.add(car);
-                car.isRented(true);
+                car.setCarForRental(true);
             } else {
-                car.isRented(false);
                 System.out.println("This type of car is already rented!");
             }
         } else {
