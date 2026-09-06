@@ -19,8 +19,7 @@ public class Blud {
     for(Car car : list) {
       carShop.rentACar(car, "Nigga", 12, 19);
     }
-
-    
+   
     motorCycle.setKm(10);
     van.setKm(40);
     privateCar.setKm(100);

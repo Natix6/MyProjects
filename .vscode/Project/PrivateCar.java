@@ -1,6 +1,8 @@
 
 public class PrivateCar extends CarData implements Car {
     
+    public static boolean carRented = false;
+    
     public PrivateCar(int number, String creator, int yearMade, int seats) {
         super(number, creator, yearMade, seats);
     }
@@ -15,6 +17,16 @@ public class PrivateCar extends CarData implements Car {
         return "\n" + "PrivateCar number=" + getNumber() + ", creator=" + getCreator() + ", yearMade=" + getYearMade() + ", seats=" + getSeats()
                 + ", km=" + getKm();
     }
+
+    public void setCarForRental(boolean rented) {
+        carRented = rented;
+    }
+
+    public boolean isRented() {
+        return carRented;
+    }
+
+    
 
 
 

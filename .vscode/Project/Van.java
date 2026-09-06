@@ -1,5 +1,7 @@
 public class Van extends CarData implements Car {
     
+    public static boolean carRented = false;
+    
     public Van(int number, String creator, int yearMade, int seats) {
         super(number, creator, yearMade, seats);
     }
@@ -13,6 +15,14 @@ public class Van extends CarData implements Car {
     public String toString() {
         return "\n" + "Van number=" + getNumber() + ", creator=" + getCreator() + ", yearMade=" + getYearMade() + ", seats=" + getSeats()
                 + ", km=" + getKm();
+    }
+
+    public void setCarForRental(boolean rented) {
+        carRented = rented;
+    }
+
+    public boolean isRented() {
+        return carRented;
     }
 
 }

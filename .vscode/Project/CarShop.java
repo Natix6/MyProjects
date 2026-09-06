@@ -12,8 +12,8 @@ public class CarShop {
 
         if(age > 18) {
             if(!car.isRented()) {
-                cars.add(car);
                 car.setCarForRental(true);
+                cars.add(car);
             } else {
                 System.out.println("This type of car is already rented!");
             }

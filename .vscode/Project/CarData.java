@@ -5,7 +5,7 @@ public class CarData {
     private final int yearMade;
     private final int seats;
     private int km;
-    private boolean carRented;
+
 
     public CarData(int number, String creator, int yearMade, int seats) {
         this.creator = creator;
@@ -36,18 +36,6 @@ public class CarData {
 
     public void setKm(int km) {
         this.km = km;
-    }
-
-    public void setCarForRental(boolean rented) {
-        if(rented) {
-            carRented = true;
-        } else {
-            carRented = false;
-        }
-    }
-
-    public boolean isRented() {
-        return carRented;
     }
 
     
