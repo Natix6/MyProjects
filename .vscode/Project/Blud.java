@@ -26,6 +26,6 @@ public class Blud {
     System.out.println(carShop.calcMoney());
     System.out.println(carShop.getRentedCars());
 
-
+    int x = (int) 3.9;
   }
 }
